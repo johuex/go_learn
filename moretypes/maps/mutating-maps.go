@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	m := make(map[string]int)
+	m := make(map[string]int) //map[key]answer
 
 	m["Answer"] = 42
 	fmt.Println("The value:", m["Answer"])
@@ -17,5 +17,5 @@ func main() {
 	// If key is not in the map, then elem is the zero value for the map's element type.
 	// If key is in m, ok is true. If not, ok is false.
 	v, ok := m["Answer"]
-	fmt.Println("The value:", v, "Present?", ok)
+	fmt.Println("The value:", v, "Present? - ", ok)
 }
