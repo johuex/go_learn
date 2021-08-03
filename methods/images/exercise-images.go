@@ -20,12 +20,12 @@ func (img Image) Bounds() image.Rectangle {
 }
 
 func (img Image) At(x, y int) color.Color {
-	img_func := func(x, y int) uint8 {
-		//return uint8(x*y)
-		//return uint8((x+y) / 2)
+	imgFunc := func(x, y int) uint8 {
+		//or return uint8(x*y)
+		//or return uint8((x+y) / 2)
 		return uint8(x ^ y)
 	}
-	v := img_func(x, y)
+	v := imgFunc(x, y)
 	return color.RGBA{v, v, 255, 255}
 }
 
